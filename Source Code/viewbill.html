@@ -1,0 +1,50 @@
+<?php session_start();
+include('login.php');
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>bill</title>
+<link href="css/viewbill.css" rel="stylesheet" type="text/css" />
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/pure-min.css">
+
+
+</head>
+
+<body>
+
+<body style="margin:0;">
+<div id="container">
+<div id="header">
+   <center><img src="logo.png" alt="logo" style="width:200px;height:70px; "></center>
+</div>
+<div id="content">
+<a href="userhome.php"  class="btn btn-primary" style="margin-left:87%;">Home</a>
+<a href="logout.php"  class="btn btn-primary" style="margin-left:93%;margin-top:-2.2%;">Logout</a>
+<div id="eb">
+<p><img src="eb.gif" alt="eb bill" style="width:60px;height:60px">Tamil Nadu Electricity Board Bill:<a href="fetchview.php" data-toggle="modal" data-target="#ebLoginModal"><button type="button"  class="btn btn-primary btn-lg">
+      VIEW BILL DETAILS</button></a></p>
+</div>
+
+<div id="tele">
+<p><img src="phone.png" alt="phone bill" style="width:60px;height:60px">Telephone Bill:<a href="telfetchview.php" data-toggle="modal" data-target="#teleLoginModal"><button type="button" class="btn btn-primary btn-lg ">
+      VIEW BILL DETAILS</button></a></p>
+</div>
+
+<div id="water">
+<p><img src="lic.png" alt="water bill" style="width:60px;height:60px">Insurance Premium:<a href="licfetchview.php" data-toggle="modal" data-target="#waterLoginModal"><button type="button" class="btn btn-primary btn-lg ">
+      VIEW BILL DETAILS</button></a></p>
+</div>
+
+<div id="gas">
+<p><img src="rent.jpg" alt="gas bill" style="width:60px;height:60px">House Rent:<a href="rentfetchview.php" data-toggle="modal" data-target="#gasLoginModal"><button type="button" class="btn btn-primary btn-lg ">
+      VIEW BILL DETAILS</button></a></p><br/><br/>
+  
+</div>
+</div>
+
+</div>
+</body>
+</html>

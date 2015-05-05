@@ -1,0 +1,69 @@
+<?php session_start();
+include('login.php');
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>EASYPAY</title>
+<link href="css/viewbill.css" rel="stylesheet" type="text/css" />
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/pure-min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+
+<body style="margin:0;">
+<div id="container">
+<div id="header">
+   <center><img src="logo.png" alt="logo" style="width:200px;height:70px; "></center>
+</div>
+<div id="content">
+<a href="userhome.php"  class="btn btn-primary" style="margin-left:87%;">Home</a>
+<a href="logout.php"  class="btn btn-primary" style="margin-left:93%;margin-top:-2.2%;">Logout</a>
+<div id="eb">
+<p><img src="eb.gif" alt="eb bill" style="width:60px;height:60px">Tamil Nadu Electricity Board Bill:<a href="#" data-toggle="modal" data-target="#ebLoginModal"><button type="button"  class="btn btn-primary btn-lg">
+      Pay Bill</button></a></p>
+</div>
+
+<div id="tele">
+<p><img src="phone.png" alt="phone bill" style="width:60px;height:60px">Telephone Bill:<a href="#" data-toggle="modal" data-target="#teleLoginModal"><button type="button" class="btn btn-primary btn-lg ">
+      Pay Bill</button></a></p>
+</div>
+
+<div id="water">
+<p><img src="lic.png" alt="water bill" style="width:60px;height:60px">Insurance Premium:<a href="#" data-toggle="modal" data-target="#waterLoginModal"><button type="button" class="btn btn-primary btn-lg ">
+      Pay Premium</button></a></p>
+</div>
+
+<div id="gas">
+<p><img src="rent.jpg" alt="gas bill" style="width:60px;height:60px">House Rent:<a href="#" style="margin-left:375px;" class="btn btn-primary btn-lg " data-placement="right" data-toggle="popover" data-title="Select Mode" data-container="body" type="button" data-html="true"  id="login">Pay Rent</a><br/><br/></p><br/><br/>
+  
+</div>
+</div>
+<div id="popover-content" class="hide">
+      <form class="form-inline" role="form">
+        <div class="form-group">
+          <input type="radio" name="male" id="male" onclick="window.open('rentpay.php','_self')"/>Easypay Wallet Transfer <br />
+		<input type="radio" name="female" id="female" onclick="window.open('banktransfer.php','_self')"/>Transfer to Bank Account<br>
+         
+        </div>
+      </form>
+    </div>
+
+</div>
+<script>
+$("[data-toggle=popover]").popover({
+    html: true, 
+	content: function() {
+          return $('#popover-content').html();
+        }
+});
+</script>
+</body>
+</html>

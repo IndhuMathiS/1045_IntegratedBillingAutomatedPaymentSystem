@@ -1,0 +1,103 @@
+#container {
+	background-image:url(../image/background.jpg);	
+	background-repeat:no-repeat;
+	background-size:100%;
+	height:768px;
+	width: 100%;
+	overflow:hidden;
+	top:0px;
+	
+	
+}
+#header{
+	background-color: #6699FF;
+	height: 70px;
+	width: 100%;
+	margin:0px auto;
+	position:fixed;
+	padding-bottom:20px;
+}
+#header h1{
+	color: white;
+	text-align: center;
+	
+
+}
+	
+#content{
+	padding-top:30px;
+padding-bottom:30px;
+padding-left:20px;
+padding-right:20px;
+
+	width:100%;
+	margin:70px auto;
+	height:auto;
+}
+
+#eb{
+
+font-size:25px;
+width:100%;
+height:100px;
+padding-left:200px;
+padding-top:10px;
+}
+
+#eb button{
+margin-left:150px;
+border:none;
+}
+#tele{
+font-size:25px;
+padding-left:200px;
+padding-top:10px;
+margin-top:10px;
+
+width:100%;
+height:100px;
+}
+
+
+#tele button{
+margin-left:345px;
+}
+#water{
+font-size:25px;
+padding-left:200px;
+padding-top:10px;
+margin-top:10px;
+
+width:100%;
+height:100px;
+}
+
+#water button{
+margin-left:287px;
+}
+#gas{
+
+font-size:25px;
+padding-left:200px;
+padding-top:10px;
+margin-top:10px;
+width:100%;
+height:100px;
+}
+
+#gas button{
+margin-left:375px;
+}
+#tax{
+font-size:25px;
+padding-left:200px;
+padding-top:10px;
+margin-top:10px;
+
+width:100%;
+height:100px;
+}
+
+#tax button{
+margin-left:330px;
+}

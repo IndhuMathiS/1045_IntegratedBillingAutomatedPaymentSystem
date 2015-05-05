@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>EASYPAY</title>
+<link href="css/addservice.css" rel="stylesheet" type="text/css" />
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/pure-min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#test").click(function(){
+        $("#eb").hide();
+    });
+});
+</script>
+<script>
+$(document).ready(function(){
+    $("#test1").click(function(){
+        $("#tele").hide();
+    });
+});
+</script>
+</head>
+
+<body>
+
+<body style="margin:0;">
+<div id="container">
+<div id="header">
+   <center><img src="logo.png" alt="logo" style="width:200px;height:70px; "></center>
+</div>
+<div id="content">
+
+<div id="eb">
+<p><img src="eb.gif" alt="eb bill" style="width:60px;height:60px">Tamil Nadu Electricity Board Bill:<a href="#" data-toggle="modal" data-target="#ebLoginModal"><button type="button" class="btn btn-primary btn-lg">
+      ADD</button></a></p>
+</div>
+
+<div id="tele">
+<p><img src="phone.png" alt="phone bill" style="width:60px;height:60px">Telephone Bill:<a href="#" data-toggle="modal" data-target="#teleLoginModal"><button type="button" class="btn btn-primary btn-lg ">
+      ADD</button></a></p>
+</div>
+
+<div id="water">
+<p><img src="water.jpg" alt="water bill" style="width:60px;height:60px">Water Tax:<a href="#" data-toggle="modal" data-target="#waterLoginModal"><button type="button" class="btn btn-primary btn-lg ">
+      ADD</button></a></p>
+</div>
+
+<div id="gas">
+<p><img src="rent.jpg" alt="gas bill" style="width:60px;height:60px">House Rent:<a href="#" data-toggle="modal" data-target="#gasLoginModal"><button type="button" class="btn btn-primary btn-lg ">
+      ADD</button></a></p>
+</div>
+
+<div id="tax">
+<p><img src="income.png" alt="income bill" style="width:60px;height:60px">Income Tax :<a href="#" data-toggle="modal" data-target="#taxLoginModal"><button type="button" class="btn btn-primary btn-lg ">
+      ADD</button></a></p>
+</div>
+
+
+
+
+<div class="modal fade" id="ebLoginModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;
+                            </span><span class="sr-only">
+                                     Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            LOGIN USING TNEB ACCOUNT </h4>
+                    </div>
+					<form action="tnebaddservice.php" method="POST">
+                    <div class="modal-body">
+                       <div class="input-group">
+            
+            <input type="text"  required name="username" class="form-control" placeholder="UserID" />
+        </div>
+        <p>
+        </p>
+        <div class="input-group">
+            
+            <input type="password" required name="password" class="form-control" placeholder="Password" />
+        </div>
+        <p>
+        </p>  
+    <button type="submit" class="btn-primary" id="test">
+            SignIn</button>
+            
+                    </div></form>
+					
+                    
+                </div>
+            </div>
+        </div>
+		
+
+<div class="modal fade" id="teleLoginModal" tabindex="-1" role="dialog" aria-labelledby="helpModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;
+                            </span><span class="sr-only">
+                                     Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            LOGIN USING TELEPHONE ACCOUNT </h4>
+                    </div>
+					<form action="telregister.php" method="POST">
+                    <div class="modal-body">
+                       <div class="input-group">
+            
+            <input type="text" name="username" class="form-control" placeholder="UserID" />
+        </div>
+        <p>
+        </p>
+        <div class="input-group">
+            
+            <input type="text" name="password" class="form-control" placeholder="Password" />
+        </div>
+        <p>
+        </p>  
+    <button type="submit" class="btn-primary" id="test1">
+            SignIn</button>
+
+                    </div></form>
+                    
+                </div>
+            </div>
+        </div>
+
+<div class="modal fade" id="waterLoginModal" tabindex="-1" 
+role="dialog" aria-labelledby="helpModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;
+                            </span><span class="sr-only">
+                                     Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            LOGIN USING WATER ACCOUNT </h4>
+                    </div>
+                    <div class="modal-body">
+                       <div class="input-group">
+            
+            <input type="text" class="form-control" placeholder="UserID" />
+        </div>
+        <p>
+        </p>
+        <div class="input-group">
+            
+            <input type="text" class="form-control" placeholder="Password" />
+        </div>
+        <p>
+        </p>  
+    <button type="submit" class="btn-primary">
+            SignIn</button>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+<div class="modal fade" id="gasLoginModal" tabindex="-1" 
+role="dialog" aria-labelledby="helpModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;
+                            </span><span class="sr-only">
+                                     Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            ENTER HOUSE OWNER  DETAILS </h4>
+                    </div>
+					
+                    <div class="modal-body">
+                       <div class="input-group">
+					   <select name="Bank" >
+					    <option value="Select Bank" selected >Select Bank
+                        </option>
+                        
+                        <option value="SBI"  >State Bank of India
+                        </option>
+						<option value="KVB"  >Karur Vysya Bank
+                        </option>
+						<option value="IB"  >Indian Bank
+                        </option>
+                    </select>
+					</div><br>
+					
+                       <div class="input-group">
+            
+            <input type="text" class="form-control" placeholder="Account Number" />
+        </div>
+        <p>
+        </p>
+        <div class="input-group">
+            
+            <input type="text" class="form-control" placeholder="Account Holder's Name" />
+        </div><br>
+		<div class="input-group">
+            
+            <select name="branch" >
+					    <option value="Select Branch" selected >Select Branch
+                        </option>
+                        
+                        <option value="chennai"  >Chennai
+                        </option>
+						<option value="namakkal"  >Namakkal
+                        </option>
+                    </select>
+        </div><br>
+		<div class="input-group">
+            
+            <input type="text" class="form-control" placeholder="Rent Amount in Rs" />
+        </div><br>
+		<div class="input-group">
+            <input class="large" data-format="dd-mm-yyyy" type="date" name="duedate" required="required" />
+            
+        </div><br>
+		
+		
+        <p>
+        </p>  
+    <button type="button" class="btn-primary">
+            Add Details</button>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+<div class="modal fade" id="taxLoginModal" tabindex="-1" 
+role="dialog" aria-labelledby="helpModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;
+                            </span><span class="sr-only">
+                                     Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">
+                            LOGIN USING INACOME TAX ACCOUNT </h4>
+                    </div>
+                    <div class="modal-body">
+                       <div class="input-group">
+            
+            <input type="text" class="form-control" placeholder="UserID" />
+        </div>
+        <p>
+        </p>
+        <div class="input-group">
+            
+            <input type="text" class="form-control" placeholder="Password" />
+        </div>
+        <p>
+        </p>  
+    <button type="button" class="btn-primary">
+            SignIn</button>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+		
+		
+		
+
+		
+		
+		
+		
+		
+</div>
+</div>
+</body>
+</html>

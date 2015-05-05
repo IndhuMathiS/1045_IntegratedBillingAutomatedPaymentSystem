@@ -1,0 +1,59 @@
+<?php session_start();
+    $conn = mysqli_connect("localhost","root","","test_database");
+	
+	
+    if (!$conn)
+    {
+        die('Could not connect: ' . mysql_error());
+    }
+
+	   //$username = htmlspecialchars(($_SESSION["user"]));
+       //$password = htmlspecialchars(($_SESSION["password"]));
+	    //$username=$_SESSION['tnebuserid'];
+	   //$sql="SELECT * FROM tneb_login WHERE username='".$_SESSION['tnebuserid']."' " or die(mysql_error());
+	   //$sql="SELECT * FROM `tneb_login` WHERE `username` = '".$_SESSION['tnebuserid']."'";
+    //$sql = "SELECT * FROM tneb_login WHERE billamount = 2222 ";
+	$sql = "SELECT * FROM tbl_login WHERE loginid='".$_SESSION['user']."' AND password ='".$_SESSION['password']."'";
+	//$sql = "SELECT * FROM tneb_login ";
+    $query= mysqli_query($conn,$sql) or die(mysqli_error($conn)) ;
+	
+	
+	
+	
+
+?>
+
+    <html>
+	<body>
+	  Welcome Mr. <?php  echo  $_SESSION['user']; ?>
+	              <?php  echo  $_SESSION['password']; ?>
+    <table>
+    <tr>
+    <th>Billamount</th>
+   
+    
+    </tr>
+
+    <tr>
+    <?php 
+    //this is to display your data
+	 
+    while($row=mysqli_fetch_array($query))
+		
+    {
+    ?> 
+	
+        <td><?php  echo $row['rent']?></td>
+        
+        <br>
+    <?php
+    }
+    ?>
+    </tr>
+    </table>
+	</body>
+	</html>
+	
+<?php
+mysqli_close($conn);
+?>

@@ -1,0 +1,83 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>EASYPAY</title>
+<link href="css/bankdetails.css" rel="stylesheet" type="text/css" />
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="css/pure-min.css">
+
+</head>
+
+<body>
+
+<body style="margin:0;">
+<div id="container">
+<div id="header">
+   <center><img src="logo.png" alt="logo" style="width:200px;height:70px;"></center>
+</div>
+<div id="content">
+<a href="logout.php"  class="btn btn-primary" style="margin-left:93%;">Logout</a>
+<a href="userhome.php"  class="btn btn-primary" style="margin-left:88%;margin-top:-2.2%;"  >Home</a>
+<div class="form_area">
+<form action="banktransfer.php" method="POST" class="pure-form pure-form-aligned">
+    <fieldset> 
+	            <div class="pure-control-group">
+				<label for="foo">Bank:</label>
+	                <select name="bank"  >
+					    <option value="" disabled selected >Select Bank 
+                        </option>
+                        
+                        <option value="KVB"  >KVB
+                        </option>
+						<option value="SBI"  >SBI
+                        </option>
+                    </select>
+				</div>
+				<div class="pure-control-group">
+				<label for="fo">Branch:</label>
+	                <select name="branch"  >
+					    <option value="" disabled selected >Select Branch 
+                        </option>
+                        
+                        <option value="chennai"  >Chennai
+                        </option>
+						<option value="namakkal"  >Namakkal
+                        </option>
+                    </select>
+				</div>
+        <div class="pure-control-group">
+            <label for="num">Account number:</label>
+            <input id="num" type="text"  name="cardnum" maxlength="16"  placeholder="Enter Account Number ">
+        </div>
+
+        <div class="pure-control-group">
+            <label for="name">Account Holder's Name:</label>
+            <input id="name" type="text"  name="holdername" maxlength="25"  placeholder="Enter Account Holder's Name">
+        </div>   
+		<div class="pure-control-group">
+            <label for="numb">Easypay Id:</label>
+            <input id="num" type="text"  name="easypayid" maxlength="16"  placeholder="Enter Easypay Id">
+        </div>
+		
+		
+		
+       	<div class="pure-controls">
+            <label for="cb" class="pure-checkbox">
+                <input id="cb"  required type="checkbox"> I've read the terms and conditions
+            </label>
+
+            <button type="submit" class="pure-button pure-button-primary">Submit</button>
+        </div>
+    </fieldset>
+</form>
+
+
+</div>
+
+</div>
+</div>
+</body>
+</html>
